@@ -1,0 +1,118 @@
+body{margin:0; 
+    background-color: hsl(185, 75%, 39%);
+}
+main{
+    font-family: 'Kumbh Sans', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: hsl(229, 23%, 23%);
+    font-size: 18px;
+}
+main::before,
+main::after{
+    content: '';
+    
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    background-size: contain;
+}
+main::before{
+    background-image: url(images/bg-pattern-top.svg);
+    top: -40%;
+    left: 0%;
+}
+main::after{
+    background-image: url(images/bg-pattern-bottom.svg);
+    bottom: -55%;
+    right: -45%;
+}
+@media (max-width:767px) {
+    main::before{
+    top: -20%;
+    left: -50%;
+}
+main::after{
+    right: -50%;
+}
+}
+.container{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.container .image{
+    background-image: url(images/bg-pattern-card.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 350px;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+    position: relative;
+}
+.avatar{
+    background-image: url(images/image-victor.jpg);
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 4px solid #FFF;
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: -50px;
+}
+.container h1{
+    margin: 75px 0 0;
+    font-size: 18px;
+}
+.container h1 span{
+    color:hsl(227, 10%, 46%);
+    font-weight: 400;
+    margin-left: 5px;
+}
+.container>p{
+    color:hsl(227, 10%, 46%);
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+.stats{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.st{
+    width: calc(100% / 3 - 40px);
+}
+.st h2{
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.st p{
+    margin-top: 5px;
+    color: hsl(0, 0%, 59%);
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+hr{
+    border: 1px solid;
+    border-color: hsl(0, 21%, 93%) transparent transparent;
+}
